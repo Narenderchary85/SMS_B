@@ -14,13 +14,13 @@ const httpServer = createServer(app);
 
 const io = new Server(httpServer, {
   cors: {
-    origin: process.env.FRONTEND_URL || " http://localhost:5173",
+    origin: process.env.FRONTEND_URL || "https://student-fee-management-system-xt21.onrender.com/",
     methods: ["GET", "POST"]
   }
 });
 
 app.use(cors({
-    origin: " http://localhost:5173",             
+    origin: "https://student-fee-management-system-xt21.onrender.com/",             
   }));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
